@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <title>naZanfona</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Stoke:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/main.js"></script>
   </head>
@@ -14,64 +18,69 @@
       => Replace action URL for Form
       => Add Privacy police
 	  -->
-    <form
+    <header class="fixed">
+      <h1 class="header-title"><a href="https://naZanfona.org"> Asociación naZanfona</a></h1>
+      <p>Actualmente estamos constituindo a asociación e ultimando detalles. Podes mostrar o teu apoio facéndote socio xa.<br>Graciñas!</p>
+    </header>
+    <main class="moving">
+          <form
       method="POST"
       action="replace"
     >
-      <h1>Faite socio de naZanfona</h1>
+      <h1>Faite socio</h1>
       <p>
         Os campos requeridos van seguidos dun
         <span aria-label="required">*</span>.
       </p>
       <section>
         <h2>Datos de Contacto</h2>
-        <p>
+        <p class="field">
           <label for="name">Nome <span aria-label="required">*</label>
           <input type="text" id="name" name="" required />
         </p>
-        <p>
+        <p class="field">
           <label for="lastName">Apelidos <span aria-label="required">*</label>
           <input type="text" id="lastName" name="" required />
         </p>
-        <p>
+        <p class="field">
           <label for="idNumber">DNI <span aria-label="required">*</label>
           <input type="text" id="idNumber" name="" required />
         </p>
-        <p>
+        <p class="field">
           <label for="birthDate">Data de Nacemento</label>
           <input type="date" id="birthDate" name=""/>
         </p>
-        <p>
+        <p class="field">
           <label for="email">Email <span aria-label="required">*</label>
           <input type="email" id="email" name="" required />
         </p>
-        <p>
+        <p class="field">
           <label for="phoneNumber">Teléfono</label>
           <input type="tel" id="phoneNumber" name="" />
         </p>
       </section>
       <section>
         <h2>Enderezo</h2>
-        <p>
+        <p class="field">
           <label for="streetAddress">Enderezo</label>
           <input type="text" id="streetAddress" name="" />
         </p>
-        <p>
+        <p class="field">
           <label for="postalCode">Código Postal</label>
           <input type="text" id="postalCode" name="" />
         </p>
-        <p>
+        <p class="field">
           <label for="city">Poboación</label>
           <input type="text" id="city" name="" />
         </p>
-        <p>
+        <p class="field">
           <label for="region">Provincia</label>
           <input type="text" id="region" name="" />
         </p>
       </section>
       <section>
         <h2>Pago da Cuota</h2>
-        <p>
+        <p class="field">
           <label for="fee">
             <span>Forma de pago:</span>
           </label>
@@ -81,28 +90,39 @@
             <option value="anual">Anual</option>
           </select>
           </p>
-        <p>
+        <p class="field">
           <label for="bankNumber">Número de Conta <span aria-label="required">*</label>
           <input type="text" id="bankNumber" name="" required />
         </p>
-        <p>
+        <p class="field">
           <label for="fullNameBankAccountOwner"
-            >Nome e apelidos do titular</label
+            >Nome e apelidos do titular <span aria-label="required">*</label
           >
           <input type="text" id="fullNameAccountOwner" name="" />
         </p>
-        <p>
-          <label for="idNumberBankAccountOwner">DNI do Titular</label>
+        <p class="field">
+          <label for="idNumberBankAccountOwner">DNI do Titular <span aria-label="required">*</label>
           <input type="text" id="idNumberBankAccountOwner" name="" />
         </p>
       </section>
       <section>
-        <!--Declaracion de privacidade-->
+        <h2>Protección de datos persoais</h2>
+        <p>
+          Empregaremos os seus datos para xestionar a alta como socio, así como para calquer comunicación requerida. 
+          Para obter máis información sobre o tratamento de datos e os teus dereitos, consulta a política de privacidade.
+        </p>
+        <p class="field">            
+        <label for="privacidade">
+              <input type="checkbox" id="privacidade" name="privacidade" required />
+              Lin e acepto a <a href="/politica-de-privacidade">política de privacidade</a>.</label>
+          </p>
+        </section>
+      <section>
         <p class="button">
           <button type="submit">Enviar</button>
         </p>
       </section>
     </form>
-
+    </main>
   </body>
 </html>
