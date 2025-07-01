@@ -83,9 +83,10 @@
         <h2>Pago da Cuota</h2>
         <p class="field">
           <label for="fee">
-            <span>Forma de pago:</span>
+            <span>Forma de pago <span aria-label="required">*</span>
           </label>
-          <select id="fee" name="">
+          <select id="fee" name="" required>
+            <option value="">-- Escolle unha opción --</option>
             <option value="trimestral">Trimestral</option>
             <option value="semestral">Semestral</option>
             <option value="anual">Anual</option>
