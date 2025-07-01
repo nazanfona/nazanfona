@@ -12,21 +12,20 @@
     <script src="js/main.js"></script>
   </head>
   <body>
-    <!--
-    TO-DO:	
-      => EDIT thank you page for Google Form / Redirect it
-      => Update nameFormEntries with final values from actual Google Form
-      => Replace action URL for Form
-      => Add Privacy police
-	  -->
     <header class="fixed">
-      <h1 class="header-title"><a href="https://naZanfona.org"> Asociación naZanfona</a></h1>
+      <h1 class="header-title"><a href="/"> Asociación naZanfona</a></h1>
       <p>Actualmente estamos constituindo a asociación e ultimando detalles. Podes mostrar o teu apoio facéndote socio xa.<br>Graciñas!</p>
     </header>
     <main class="moving">
-          <form
+      <script type="text/javascript">var submitted=false;</script>
+      <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted)  {window.location='/thank-you.html';}"></iframe>
+      <form
+          id="altaSocio"
       method="POST"
-      action="replace"
+      action=""
+      autocomplete="on"
+      target="hidden_iframe"
+      onsubmit="submitted=true;"
     >
       <h1>Faite socio</h1>
       <p>
@@ -49,7 +48,7 @@
         </p>
         <p class="field">
           <label for="birthDate">Data de Nacemento</label>
-          <input type="date" id="birthDate" name=""/>
+          <input type="date" id="birthDate" name="" autocomplete="bday"/>
         </p>
         <p class="field">
           <label for="email">Email <span aria-label="required">*</label>
@@ -64,7 +63,7 @@
         <h2>Enderezo</h2>
         <p class="field">
           <label for="streetAddress">Enderezo</label>
-          <input type="text" id="streetAddress" name="" />
+          <input type="text" id="streetAddress" name="" autocomplete="street-address"/>
         </p>
         <p class="field">
           <label for="postalCode">Código Postal</label>
@@ -72,7 +71,7 @@
         </p>
         <p class="field">
           <label for="city">Poboación</label>
-          <input type="text" id="city" name="" />
+          <input type="text" id="city" name="" autocomplete="address-level2"/>
         </p>
         <p class="field">
           <label for="region">Provincia</label>
@@ -100,11 +99,11 @@
           <label for="fullNameBankAccountOwner"
             >Nome e apelidos do titular <span aria-label="required">*</label
           >
-          <input type="text" id="fullNameAccountOwner" name="" />
+          <input type="text" id="fullNameAccountOwner" name="" autocomplete="name"/>
         </p>
         <p class="field">
           <label for="idNumberBankAccountOwner">DNI do Titular <span aria-label="required">*</label>
-          <input type="text" id="idNumberBankAccountOwner" name="" />
+          <input type="text" id="idNumberAccountOwner" name="" autocomplete="off"/>
         </p>
       </section>
       <section>
