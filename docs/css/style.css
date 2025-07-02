@@ -381,6 +381,12 @@ h2 {
 	margin-bottom: 0.5em;
 }
 
+h3 {
+  font-size: 1.5em;
+	line-height: 1.2;
+	margin-bottom: 0.5em;
+}
+
  a {
 	color: #292622;
 }
@@ -405,7 +411,6 @@ header.fixed {
     padding: 7em 5em 2.75em;
 }
 
-
 main.moving {
 	position: absolute;
   top: 40vh;
@@ -414,7 +419,7 @@ main.moving {
   z-index: 2;
 }
 
-form {
+form, .card {
 	background-color: #DDCEB7;
 	margin: 1em auto 2.5em;
   padding: 1.05em 1.15em;
@@ -464,6 +469,14 @@ button {
 	margin-right: 0.2em;
 }
 
+
+footer {
+  text-align: center;
+}
+
+footer address {
+  margin-bottom: 2.5em;
+}
 @media screen and (max-width: 700px) {
   form {
     max-width: 20em;
@@ -473,6 +486,10 @@ button {
   }
   h2 {
     font-size: 1.7em;
+  }
+
+  h3 {
+    font-size: 1.3em;
   }
   label {
     font-size: 1.2em;
